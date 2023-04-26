@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Extension</title>
+  </head>
+  <body>
+    <script>
+      // Retrieve the username and password fields
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Send the username and password to the extension
+      chrome.runtime.sendMessage({username: username, password: password}, function(response) {
+        console.log(response);
+      });
+    </script>
+  </body>
+</html>
