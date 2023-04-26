@@ -1,0 +1,8 @@
+// Get the login details from the record fields
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+
+// Send a message to the extension with the login details
+chrome.runtime.sendMessage({username: username, password: password}, function(response) {
+  console.log(response);
+});
