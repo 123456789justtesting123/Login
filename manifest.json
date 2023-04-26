@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Login Extension",
+  "version": "1.0",
+  "description": "An extension that logs the user into another website.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.zoho.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
